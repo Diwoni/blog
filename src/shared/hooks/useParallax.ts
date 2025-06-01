@@ -8,7 +8,7 @@ export function useParallax(selector = '.parallax-bg') {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       elements.forEach((el) => {
-        const speed = parseFloat(el.dataset.speed || '0.3');
+        const speed = parseFloat(el.dataset.speed ?? '0.3');
         el.style.transform = `translateY(${scrollY * speed}px)`;
       });
     };
